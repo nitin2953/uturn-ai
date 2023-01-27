@@ -224,6 +224,7 @@ section#section-4 {
 		padding: 55px 0;
 		background-color: #fff;
 		border-radius: var(--radius-large);
+		overflow: auto;
 
 		& > * {
 			grid-column: 2;
@@ -262,7 +263,7 @@ section#section-4 {
 			content: "";
 			position: absolute;
 			inset: 0 0 auto;
-			width: min(80%, 400px);
+			width: min(70%, 400px);
 			height: 30px;
 			margin: auto;
 			border-radius: 0 0 var(--radius) var(--radius);
