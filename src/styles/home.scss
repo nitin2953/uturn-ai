@@ -83,7 +83,7 @@ section#section-2 {
 
 section#section-3 {
 
-	& > .grid {
+	& .grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 		gap: 30px;
@@ -117,10 +117,7 @@ section#section-3 {
 
 	}
 
-	& > .primary {
-		width: 100%;
-		font-size: 25px;
-	}
+	& > .primary { font-size: 25px }
 }
 
 section#section-4 {
