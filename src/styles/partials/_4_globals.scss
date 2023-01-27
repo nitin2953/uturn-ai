@@ -314,6 +314,7 @@ section#featured > div {
 
 		& > div {
 			gap: 15px;
+			align-items: flex-start;
 
 			& > div {
 				display: grid;
@@ -321,10 +322,17 @@ section#featured > div {
 				gap: 15px;
 				font-size: 13px;
 
+				@media (max-width: 900px) {
+					font-size: inherit;
+				}
+
 				img {
-					aspect-ratio: 1;
 					object-fit: cover;
 					border-radius: var(--radius);
+
+					@media (min-width: 900px) {
+						aspect-ratio: 1;
+					}
 				}
 
 				time {
