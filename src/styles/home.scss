@@ -1,0 +1,197 @@
+html {
+	background-color: #FAFAFA;
+	background-color: #F0EFF5;
+}
+
+section {
+	& > :first-child {
+		& > h2 {
+			color: #20227D;
+			font-size: 40px;
+		}
+
+		& > b {
+			color: #0008;
+			font-size: 13px;
+		}
+	}
+}
+
+
+section#section-1 {
+	background-image: var(--color-gradient);
+	color: #fff;
+
+	& h1 {
+		font-size: 48px;
+	}
+
+	& p {
+		font-size: 18px;
+		line-height: 2.2;
+	}
+}
+
+section#section-2 {
+	.tab {
+		.tab-stripe {
+			overflow: auto;
+			scrollbar-width: none;
+
+			mask-image: linear-gradient(to left, #0000 0, #000 50px);
+			-webkit-mask-image: linear-gradient(to left, #0000 0, #000 50px);
+			mask-composite: source-in;
+			-webkit-mask-composite: source-in;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			& > button {
+				flex: 1 0 auto;
+				gap: 20px;
+				padding: 20px 15px;
+				color: #20227D;
+
+				&.active {
+					border-bottom: 2px solid #20227D;
+				}
+
+				& > svg {
+					width: 30px;
+					height: 30px;
+					fill: #6A40FF;
+				}
+			}
+		}
+	}
+
+	.grid-2 {
+		gap: 8%;
+
+		@media (min-width: 1000px) {
+			& > .image-wrap > button.play {
+				left: auto;
+				transform: translateX(50%);
+			}
+		}
+
+		& > .content-wrap {
+			gap: 20px;
+		}
+	}
+}
+
+
+section#section-3 {
+
+	& > .grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		gap: 30px;
+
+		& > .card {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 25px;
+			padding: 35px;
+			border-radius: var(--radius);
+			background-color: #fff;
+			box-shadow: 0 5px 10px #0001;
+		}
+
+		& h3 {
+			font-size: 22px;
+			color: #20227D;
+		}
+
+		& p {
+			font-size: 14px;
+			color: #000b;
+		}
+
+		& svg {
+			width: 20px;
+			height: 20px;
+			margin-top: auto;
+		}
+
+	}
+
+	& > .primary {
+		width: 100%;
+		font-size: 25px;
+	}
+}
+
+section#section-4 {
+	background-color: #fff;
+
+	& > div {
+		gap: 50px;
+
+		& > div:first-child {
+			justify-content: space-between;
+			flex-wrap: wrap;
+			width: 100%;
+			gap: 30px;
+
+			& > h2 {
+				width: 450px;
+				font-size: 28px;
+
+				@media (max-width: 900px) {
+					width: 100%;
+				}
+			}
+
+			& > div {
+				width: 350px;
+				justify-content: space-between;
+				gap: 30px;
+				line-height: 1.6;
+
+				div { flex: 1 }
+				p { font-size: 14px }
+				strong { font-size: 16px }
+			}
+		}
+
+		& > div:last-child {
+			display: flex;
+			gap: 50px;
+			flex-wrap: wrap;
+
+			& > div {
+				flex: 1 280px;
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+
+				& > img { width: 105px }
+
+				& q { flex: 1; }
+
+				.user {
+					display: flex;
+					gap: 10px;
+
+					img {
+						width: 60px;
+						height: 60px;
+						border-radius: var(--radius-full);
+						object-fit: cover;
+					}
+
+					div {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-around;
+					}
+				}
+			}
+		}
+	}
+}
+

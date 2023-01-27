@@ -1,0 +1,15 @@
+<header id="site-header" {% if page.url === "/" %} class="dynamic" {% endif %}>
+	<div>
+		<a id="logo" href="/"><img src="/images/logo.png"></a>
+
+		<button id="mob-menu">☰</button>
+
+		<nav>
+			{%- for link in site.header_links %}
+			<a href="{{ link.url | url }}" {% if link.url === page.url %} aria-current="page" {% endif %}>{{ link.title }}</a>
+			{%- endfor %}
+		</nav>
+
+		<a id="cta-btn" href="/demo/">I want a Demo</a>
+	</div>
+</header>

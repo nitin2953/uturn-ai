@@ -1,0 +1,32 @@
+{
+	"site": {
+		"title": "UTURN SYSTEM"
+	},
+	"header_links": [
+		{
+			"title": "Home",
+			"url": "/"
+		},
+		{
+			"title": "AI Enforcement",
+			"url": "/ai-enforcement/"
+		},
+		{
+			"title": "Features",
+			"url": "/features/"
+		},
+		{
+			"title": "Track Record",
+			"url": "/track-record/"
+		},
+		{
+			"title": "Blog",
+			"url": "/blog/"
+		},
+		{
+			"title": "Contact",
+			"url": "/contact/"
+		}
+	],
+	"footer_links": []
+}

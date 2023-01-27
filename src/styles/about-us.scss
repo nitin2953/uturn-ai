@@ -1,0 +1,126 @@
+section > .grid-2 {
+	.tab > .tab-stripe {
+		width: fit-content;
+		border-radius: var(--radius-full);
+		overflow: hidden;
+		box-shadow: 0 0 20px #0001;
+		border: 1px solid #0002;
+
+		button {
+			&.badge { --color: #ccc }
+
+			&.active {
+				--color: var(--color-purple);
+				color: var(--color-purple);
+			}
+		}
+	}
+
+	div:last-child > div { align-items: inherit }
+}
+
+section#timeline-section {
+	background-color: #F0EFF5;
+}
+
+#timeline {
+	display: flex;
+	flex-direction: column;
+
+	& > .line {
+		position: relative;
+		flex: 1;
+		display: flex;
+		justify-content: space-around;
+		padding: 50px 0;
+		counter-increment: card;
+
+		@media (max-width: 900px) {
+			flex-direction: column;
+			gap: 20px;
+			padding: 20px 0 20px 30px;
+		}
+
+		@media (min-width: 900px) {
+			& > * { width: 33% }
+		}
+
+		&::before, &::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			background-color: #157efb;
+
+			@media (min-width: 900px) {
+				inset: 0;
+				margin: auto;
+			}
+		}
+
+		&::before {
+			width: 1px;
+			height: 100%;
+		}
+		&::after {
+			width: 30px;
+			height: 2px;
+			top: 45px;
+			left: -15px;
+
+			@media (min-width: 900px) {
+				inset: 0;
+				margin: auto;
+			}
+		}
+
+		& > .card {
+			position: relative;
+			padding: 30px;
+			border-radius: var(--radius);
+			background-color: #fff;
+			color: #666;
+			z-index: 0;
+
+			@media (max-width: 900px) {
+				order: 1;
+			}
+
+			h3 {
+				font-size: 22px;
+				color: #000;
+				margin-bottom: 20px;
+			}
+
+			&::before {
+				content: counter(card, decimal-leading-zero);
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				font-size: 100px;
+				font-weight: 600;
+				line-height: 1;
+				color: #f6f6f6;
+				-webkit-mask: linear-gradient(45deg, #0000 0%, #000 100%);
+				mask: linear-gradient(60deg, #0000 0%, #000 100%);
+				z-index: -1;
+			}
+		}
+
+		& > .num {
+			color: #157efb;
+			font-size: 45px;
+			align-self: center;
+			justify-self: end;
+			text-align: right;
+
+			@media (max-width: 900px) {
+				align-self: start;
+			}
+		}
+		& > .card ~ .num {
+			justify-self: start;
+			text-align: left;
+		}
+
+	}
+}
