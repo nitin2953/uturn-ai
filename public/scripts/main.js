@@ -41,28 +41,32 @@ if (document.querySelector(".tab")) {
 
 // POPUP
 const cards = document.querySelectorAll(".card")
-const popups = document.querySelectorAll(".popup")
 const popupContainer = document.querySelector(".popup-container")
+const popups = document.querySelectorAll(".popup")
 
 if (cards) {
 	cards.forEach((card, index) => {
 		card.addEventListener("click", (e) => {
 			e.preventDefault()
-
 			popupContainer.classList.add("active")
-			popupContainer.addEventListener("click", handleClick);
-
-			popups.forEach((popup) => popup.classList.remove("active"))
 			popups[index].classList.add("active")
+			popupContainer.addEventListener("click", handleClick)
 		})
 	})
 }
 
+popups.forEach((popup) => {
+	const closeBtn = popup.querySelector(".popup-close-btn")
+	closeBtn.addEventListener("click", () => {
+		popupContainer.classList.remove("active")
+		popup.classList.remove("active")
+	})
+})
+
 function handleClick(e) {
 	if (e.target.closest(".popup-container") && !e.target.closest(".popup")) {
 		popupContainer.classList.remove("active")
-		popupContainer.removeEventListener("click", handleClick)
-
 		popups.forEach((popup) => popup.classList.remove("active"))
+		popupContainer.removeEventListener("click", handleClick)
 	}
 }
