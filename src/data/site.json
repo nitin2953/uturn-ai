@@ -1,6 +1,6 @@
 {
 	"site": {
-		"title": "UTURN SYSTEM"
+		"title": "UTURN AI"
 	},
 	"header_links": [
 		{
@@ -28,5 +28,130 @@
 			"url": "/contact/"
 		}
 	],
-	"footer_links": []
+	"footer_links": {
+		"About Iteck": [
+			{
+				"text": "About Us",
+				"url": "/about/"
+			},
+			{
+				"text": "Shop",
+				"url": "/shop/"
+			},
+			{
+				"text": "Privacy Policy",
+				"url": "/privacy-policy/"
+			},
+			{
+				"text": "Refund Policy",
+				"url": "/refund-policy/"
+			},
+			{
+				"text": "Terms Conditions",
+				"url": "/terms-conditions/"
+			},
+			{
+				"text": "FAQ Page",
+				"url": "/faq-page/"
+			},
+			{
+				"text": "Blog",
+				"url": "/blog/"
+			},
+			{
+				"text": "Contact",
+				"url": "/contact/"
+			},
+			{
+				"text": "Terms Of Use",
+				"url": "/terms-of-use/"
+			},
+			{
+				"text": "Join Us",
+				"url": "/join-us/"
+			},
+			{
+				"text": "Get In Touch",
+				"url": "/contact/"
+			}
+		],
+		"Resources": [
+			{
+				"text": "Webmail",
+				"url": "/webmail/"
+			},
+			{
+				"text": "WHOIS",
+				"url": "/whois/"
+			},
+			{
+				"text": "ICANN Confirmation",
+				"url": "/icann-confirmation/"
+			},
+			{
+				"text": "Designers & Developers",
+				"url": "/designers-developers/"
+			},
+			{
+				"text": "Redeem Code",
+				"url": "/redeem-code/"
+			},
+			{
+				"text": "Product Catalog",
+				"url": "/product-catalog/"
+			}
+		],
+		"Shopping": [
+			{
+				"text": "Domain Search",
+				"url": "/domain-search/"
+			},
+			{
+				"text": "Websites",
+				"url": "/websites/"
+			},
+			{
+				"text": "WordPress",
+				"url": "/wordpress/"
+			},
+			{
+				"text": "Hosting",
+				"url": "/hosting/"
+			},
+			{
+				"text": "Web Security",
+				"url": "/web-security/"
+			},
+			{
+				"text": "Email & Office",
+				"url": "/email-office/"
+			}
+		],
+		"Partner Programs": [
+			{
+				"text": "Affiliates",
+				"url": "/affiliates/"
+			},
+			{
+				"text": "Reseller Programs",
+				"url": "/reseller-programs/"
+			},
+			{
+				"text": "GoDaddy Pro",
+				"url": "/godaddy-pro/"
+			},
+			{
+				"text": "My Products",
+				"url": "/my-products/"
+			},
+			{
+				"text": "Renewals & Billing",
+				"url": "/renewals-billing/"
+			},
+			{
+				"text": "Create Account",
+				"url": "/create-account/"
+			}
+		]
+	}
 }
