@@ -266,7 +266,7 @@ section#featured > div {
 	flex-direction: column;
 	gap: 40px;
 
-	& > form {
+	& > #search-form {
 		display: flex;
 		overflow: hidden;
 
@@ -336,6 +336,8 @@ section#featured > div {
 		}
 
 		form {
+			display: contents;
+
 			input, button {
 				padding: 15px;
 				width: 100%;

@@ -62,12 +62,13 @@ section#timeline-section {
 			height: 100%;
 		}
 		&::after {
-			width: 30px;
+			width: 20px;
 			height: 2px;
 			top: 45px;
-			left: -15px;
+			left: -10px;
 
 			@media (min-width: 900px) {
+				width: 30px;
 				inset: 0;
 				margin: auto;
 			}
