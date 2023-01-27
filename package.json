@@ -9,7 +9,7 @@
     "sass:build": "sass src/styles:dist/styles --no-source-map",
     "watch": "npm-run-all sass:build --parallel sass:watch 11ty:watch",
     "serve": "npm-run-all sass:build --parallel sass:watch 11ty:serve",
-    "build": "npm-run-all sass:build faq:build 11ty:build"
+    "build": "npm-run-all sass:build 11ty:build"
   },
   "devDependencies": {
     "dev-ip": "^1.0.1",
