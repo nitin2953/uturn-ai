@@ -5,15 +5,15 @@ document.getElementById("mob-menu").onclick = () => {
 
 
 // DYNAMIC HEADER
-const dynamic_header = document.querySelector("#site-header.dynamic");
+const dynamic_header = document.querySelector("#site-header.dynamic")
 
 if (dynamic_header) {
 	const observer = new IntersectionObserver(
 	  ([e]) => e.target.classList.toggle("stucked", e.intersectionRatio < 1),
 	  { threshold: [1] }
-	);
+	)
 
-	observer.observe(dynamic_header);
+	observer.observe(dynamic_header)
 }
 
 
@@ -23,7 +23,7 @@ if (document.querySelector(".tab")) {
 	const tabButtons = [...document.querySelectorAll('.tab-stripe > button')]
 	const tabContents = [...document.querySelectorAll('.tab-content > div')]
 
-	let currentTab = tabButtons.findIndex(button => button.classList.contains('active'));
+	let currentTab = tabButtons.findIndex(button => button.classList.contains('active'))
 
 	function setTab(index = 0) {
 		tabButtons[currentTab].classList.remove('active')
@@ -36,4 +36,33 @@ if (document.querySelector(".tab")) {
 	}
 
 	tabButtons.forEach((button, index) => button.onclick = () => setTab(index) )
+}
+
+
+// POPUP
+const cards = document.querySelectorAll(".card")
+const popups = document.querySelectorAll(".popup")
+const popupContainer = document.querySelector(".popup-container")
+
+if (cards) {
+	cards.forEach((card, index) => {
+		card.addEventListener("click", (e) => {
+			e.preventDefault()
+
+			popupContainer.classList.add("active")
+			popupContainer.addEventListener("click", handleClick);
+
+			popups.forEach((popup) => popup.classList.remove("active"))
+			popups[index].classList.add("active")
+		})
+	})
+}
+
+function handleClick(e) {
+	if (e.target.closest(".popup-container") && !e.target.closest(".popup")) {
+		popupContainer.classList.remove("active")
+		popupContainer.removeEventListener("click", handleClick)
+
+		popups.forEach((popup) => popup.classList.remove("active"))
+	}
 }

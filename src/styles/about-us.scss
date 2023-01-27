@@ -33,7 +33,7 @@ section#timeline-section {
 		display: flex;
 		justify-content: space-around;
 		padding: 50px 0;
-		counter-increment: card;
+		counter-increment: box;
 
 		@media (max-width: 900px) {
 			flex-direction: column;
@@ -74,7 +74,7 @@ section#timeline-section {
 			}
 		}
 
-		& > .card {
+		& > .box {
 			position: relative;
 			padding: 30px;
 			border-radius: var(--radius);
@@ -93,7 +93,7 @@ section#timeline-section {
 			}
 
 			&::before {
-				content: counter(card, decimal-leading-zero);
+				content: counter(box, decimal-leading-zero);
 				position: absolute;
 				top: 10px;
 				right: 10px;
@@ -118,7 +118,7 @@ section#timeline-section {
 				align-self: start;
 			}
 		}
-		& > .card ~ .num {
+		& > .box ~ .num {
 			justify-self: start;
 			text-align: left;
 		}
