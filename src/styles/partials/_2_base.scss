@@ -22,6 +22,9 @@
 	--fluid-xl: clamp(1.25rem, calc(1.14rem + 0.48vw), 1.50rem); // H4,H5,H6 = 20-24
 }
 
+* {
+	line-height: calc(1em + .4rem);
+}
 
 :focus-visible {
 	outline: 3px solid #04f;
@@ -46,10 +49,14 @@ html {
 
 a {
 	color: currentColor;
-	transition: background-color 0.2s;
+	transition: color 0.2s, background-color 0.2s;
 
 	&:not(p &) {
 		text-decoration: none;
+	}
+
+	&:hover {
+		color: var(--color-primary);
 	}
 }
 
@@ -59,7 +66,7 @@ button, .btn {
 	border: none;
 	border-radius: var(--radius);
 	background-color: #0000;
-	transition: background-color 0.2s;
+	transition: color 0.2s, background-color 0.2s;
 	user-select: none;
 	cursor: pointer;
 

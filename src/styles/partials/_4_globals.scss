@@ -27,9 +27,6 @@ header#site-header {
 	transition: background-color .3s;
 	z-index: 2;
 
-	// &:not(.dynamic), &.stucked, .menu-opened & { background-color: #1F227D }
-	// &.stucked, .menu-opened & { background-color: #1F227D }
-
 	&:not(.dynamic) {
 		background-color: #1F227D;
 
@@ -41,7 +38,7 @@ header#site-header {
 		&.stucked, .menu-opened & { background-color: #1F227D }
 
 		& + main > :first-child {
-			padding-top: calc( var(--header-height) + ( var(--padding-block) / 2 ) ) !important;
+			padding-top: var(--header-height) !important;
 		}
 	}
 
@@ -132,7 +129,7 @@ footer#site-footer {
 			& nav {
 				display: flex;
 				flex-direction: column;
-				gap: 20px;
+				gap: 15px;
 				flex: 1;
 				min-width: fit-content;
 			}
@@ -141,8 +138,6 @@ footer#site-footer {
 				color: #fff;
 				font-size: 18px;
 				font-weight: 600;
-				// display: flex;
-				// align-items: center;
 				gap: 15px;
 				margin-bottom: 15px;
 			}

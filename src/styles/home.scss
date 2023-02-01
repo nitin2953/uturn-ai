@@ -20,6 +20,17 @@ section {
 section#section-1 {
 	background-image: var(--color-gradient);
 	color: #fff;
+	min-height: 100vh;
+
+	#secondary-nav {
+		gap: 25px;
+		padding-block: calc(var(--padding-block) / 4);
+		border-top: 1px solid #fff6;
+
+		& a[aria-current=true] {
+			font-weight: 700;
+		}
+	}
 
 	& h1 {
 		font-size: 48px;
@@ -77,6 +88,14 @@ section#section-2 {
 
 		& > .content-wrap {
 			gap: 20px;
+
+			& h3 {
+				font-size: 36px;
+			}
+
+			& strong {
+				font-size: 19px;
+			}
 		}
 	}
 }
@@ -121,7 +140,11 @@ section#section-3 {
 }
 
 section#section-4 {
-	background-color: #fff;
+	background: #fff url("/images/world.png") center / contain no-repeat;
+
+	@media (max-width: 700px) {
+		background-position: center 50px;
+	}
 
 	& > div {
 		gap: 50px;
@@ -198,7 +221,6 @@ section#section-4 {
 	place-items: center;
 	width: 100vw;
 	background-color: #003cb44d;
-
 	z-index: 20;
 
 	&, & .popup {
@@ -224,7 +246,32 @@ section#section-4 {
 		padding: 55px 0;
 		background-color: #fff;
 		border-radius: var(--radius-large);
-		overflow: auto;
+		overflow: overlay;
+
+		@media (hover: hover) {
+			&::-webkit-scrollbar {
+				width: 14px;
+				height: 14px;
+
+				&-thumb {
+					min-height: 28px;
+					background-color: #0003;
+					background-clip: padding-box;
+					border: 3px solid transparent;
+					border-radius: 7px;
+
+					&:hover { background-color: #0006 }
+				}
+
+				&-track {
+					box-shadow: none;
+					margin: 0 4px;
+					border-width: 4px !important;
+					background-clip: padding-box;
+					border: solid transparent;
+				}
+			}
+		}
 
 		& > * {
 			grid-column: 2;
@@ -252,7 +299,7 @@ section#section-4 {
 
 					&::before {
 						position: absolute;
-						top: 5px;
+						top: 7px;
 						left: -18px;
 						content: "";
 						width: 8px;

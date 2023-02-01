@@ -29,6 +29,10 @@ section, .flex-col {
 	flex-direction: column;
 }
 
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
 section {
 	--padding-inline: clamp(15px, calc(0.13rem + 3.57vw), 45px);
 	--padding-inline: clamp(20px, 0.58rem + 2.98vw, 45px);
