@@ -38,7 +38,7 @@ header#site-header {
 		&.stucked, .menu-opened & { background-color: #1F227D }
 
 		& + main > :first-child {
-			padding-top: var(--header-height) !important;
+			padding-top: calc( var(--header-height) + ( var(--padding-block) / 2 ) ) !important;
 		}
 	}
 

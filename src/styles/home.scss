@@ -1,5 +1,4 @@
 html {
-	background-color: #FAFAFA;
 	background-color: #F0EFF5;
 }
 
@@ -18,18 +17,30 @@ section {
 }
 
 section#section-1 {
-	background-image: var(--color-gradient);
+	position: relative;
 	color: #fff;
 	min-height: 100vh;
+	z-index: 0;
 
-	#secondary-nav {
-		gap: 25px;
-		padding-block: calc(var(--padding-block) / 4);
-		border-top: 1px solid #fff6;
+	&::before {
+		position: absolute;
+		inset: 0;
+		content: "";
+		background: var(--color-gradient);
+		z-index: -1;
+		transition: opacity 1s;
+	}
+	&.video-loaded::before {
+		opacity: .5;
+	}
 
-		& a[aria-current=true] {
-			font-weight: 700;
-		}
+	& > #hero-video {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -2;
 	}
 
 	& h1 {
@@ -101,6 +112,7 @@ section#section-2 {
 }
 
 section#section-3 {
+	background: linear-gradient(#fff 0, #fff 66%, #F0EFF5 66%, #F0EFF5 100%);
 
 	& .grid {
 		display: grid;

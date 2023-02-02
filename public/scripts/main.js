@@ -17,20 +17,36 @@ if (dynamic_header) {
 }
 
 
+// HERO VIDEO
+const hero_section = document.getElementById("section-1")
+const hero_video = document.getElementById("hero-video")
+if (hero_video) {
+	setTimeout(() => {
+		if (hero_video.readyState === 4) {
+			hero_section.classList.add("video-loaded")
+			hero_video.play()
+		} else {
+			hero_video.addEventListener("loadeddata", () => {
+				hero_section.classList.add("video-loaded")
+				hero_video.play()
+			})
+		}
+	}, 3000)
+}
 
 // TABS
 if (document.querySelector(".tab")) {
-	const tabButtons = [...document.querySelectorAll('.tab-stripe > button')]
-	const tabContents = [...document.querySelectorAll('.tab-content > div')]
+	const tabButtons = [...document.querySelectorAll(".tab-stripe > button")]
+	const tabContents = [...document.querySelectorAll(".tab-content > div")]
 
-	let currentTab = tabButtons.findIndex(button => button.classList.contains('active'))
+	let currentTab = tabButtons.findIndex(button => button.classList.contains("active"))
 
 	function setTab(index = 0) {
-		tabButtons[currentTab].classList.remove('active')
-		tabContents[currentTab].classList.remove('active')
+		tabButtons[currentTab].classList.remove("active")
+		tabContents[currentTab].classList.remove("active")
 
-		tabButtons[index].classList.add('active')
-		tabContents[index].classList.add('active')
+		tabButtons[index].classList.add("active")
+		tabContents[index].classList.add("active")
 
 		currentTab = index
 	}
